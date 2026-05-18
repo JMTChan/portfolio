@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jasper Marc Chan — Wix Designer, Velo Developer, and AI-Assisted Web Developer based in Davao City, Philippines." />
+  <meta name="author" content="Jasper Marc T. Chan" />
+  <title>Jasper Marc Chan — Wix Designer · Velo Developer · AI-Assisted Web Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Animated background grid + noise -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="bg-noise" aria-hidden="true"></div>
+
+  <!-- Nav -->
+  <header class="nav">
+    <a href="#top" class="nav__logo">
+      <span class="nav__logo-mark">JC</span>
+      <span class="nav__logo-divider"></span>
+      <span class="nav__logo-text">Jasper Marc Chan</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#contact" class="nav__cta">
+      <span>Let's talk</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+
+    <button class="nav__menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" aria-hidden="true">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ============== HERO ============== -->
+    <section class="hero">
+      <div class="hero__inner">
+
+        <div class="hero__meta reveal" data-delay="0">
+          <span class="dot"></span>
+          <span>Available for new projects · Davao City, PH</span>
+        </div>
+
+        <h1 class="hero__title">
+          <span class="reveal" data-delay="100">Designing &amp;</span>
+          <span class="reveal" data-delay="200">developing the</span>
+          <span class="reveal" data-delay="300">modern <em>web</em>.</span>
+        </h1>
+
+        <p class="hero__lede reveal" data-delay="500">
+          I'm <strong>Jasper Marc Chan</strong> — a Wix Designer, Velo Developer, and AI-assisted web developer with 3+ years of experience building responsive, scalable websites and full-stack applications for businesses, legal professionals, and political campaigns.
+        </p>
+
+        <div class="hero__actions reveal" data-delay="650">
+          <a href="#projects" class="btn btn--primary">
+            <span>View selected work</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+        </div>
+
+        <div class="hero__stats reveal" data-delay="800">
+          <div class="stat">
+            <div class="stat__num">3<span>+</span></div>
+            <div class="stat__label">Years building<br/>on Wix &amp; Velo</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">10<span>+</span></div>
+            <div class="stat__label">Client sites<br/>shipped &amp; maintained</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">∞</div>
+            <div class="stat__label">Pixels pushed<br/>(approximate)</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Decorative stack -->
+      <div class="hero__stack reveal" data-delay="900">
+        <div class="stack-card stack-card--1">
+          <div class="stack-card__label">stack.tsx</div>
+          <div class="stack-card__lines">
+            <div><span class="kw">const</span> <span class="var">stack</span> = {</div>
+            <div>&nbsp;&nbsp;cms: <span class="str">'Wix Studio'</span>,</div>
+            <div>&nbsp;&nbsp;code: <span class="str">'Velo + TS'</span>,</div>
+            <div>&nbsp;&nbsp;app: <span class="str">'Next.js'</span>,</div>
+            <div>&nbsp;&nbsp;db: <span class="str">'Postgres'</span>,</div>
+            <div>&nbsp;&nbsp;pay: <span class="str">'Stripe'</span>,</div>
+            <div>&nbsp;&nbsp;ai: <span class="str">'Claude Code'</span>,</div>
+            <div>}</div>
+          </div>
+        </div>
+        <div class="stack-card stack-card--2">
+          <span class="badge">Wix Certified</span>
+          <span>Velo Developer</span>
+        </div>
+        <div class="stack-card stack-card--3">
+          <div class="stack-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <span>Full-stack &amp;<br/>AI-assisted</span>
+        </div>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-label="Scroll to about">
+        <span>scroll</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </section>
+
+    <!-- ============== ABOUT ============== -->
+    <section id="about" class="section">
+      <div class="section__head">
+        <span class="section__num">01</span>
+        <h2 class="section__title">About</h2>
+        <span class="section__rule"></span>
+      </div>
+
+      <div class="about">
+        <div class="about__main">
+          <p class="about__lede">
+            I build the kind of websites that <em>quietly do their job well</em> — fast, responsive, and built with intention.
+          </p>
+          <p>
+            For the past 3+ years I've been designing and developing custom websites using <strong>Wix Classic</strong>, <strong>Wix Studio</strong>, and <strong>Velo</strong> — from business sites and CMS-driven content platforms to legal practice websites and political campaign pages.
+          </p>
+          <p>
+            More recently I've moved into <strong>AI-assisted, full-stack web development</strong>, working with Next.js, TypeScript, Tailwind, Prisma, and PostgreSQL — using tools like Claude Code to ship complex features faster without giving up on craft.
+          </p>
+          <p>
+            I'm based in Davao City, Philippines, and work with clients across the US and worldwide. Most of my work comes from <strong>returning clients</strong> — which I take as the best signal I'm doing something right.
+          </p>
+        </div>
+
+        <aside class="about__side">
+          <div class="info-card">
+            <div class="info-card__label">Based in</div>
+            <div class="info-card__value">Davao City, PH</div>
+          </div>
+          <div class="info-card">
+            <div class="info-card__label">Working with</div>
+            <div class="info-card__value">Clients worldwide</div>
+          </div>
+          <div class="info-card">
+            <div class="info-card__label">Specialty</div>
+            <div class="info-card__value">Wix · Velo · Next.js</div>
+          </div>
+          <div class="info-card info-card--accent">
+            <div class="info-card__label">Status</div>
+            <div class="info-card__value">
+              <span class="status-dot"></span>
+              Open to work
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============== SKILLS ============== -->
+    <section id="skills" class="section">
+      <div class="section__head">
+        <span class="section__num">02</span>
+        <h2 class="section__title">Skills &amp; Stack</h2>
+        <span class="section__rule"></span>
+      </div>
+
+      <div class="skills">
+        <div class="skill-group">
+          <h3 class="skill-group__title">Wix Ecosystem</h3>
+          <ul class="chip-list">
+            <li class="chip chip--accent">Wix Studio</li>
+            <li class="chip chip--accent">Wix Classic</li>
+            <li class="chip chip--accent">Velo by Wix</li>
+            <li class="chip">Dynamic Pages</li>
+            <li class="chip">CMS Collections</li>
+            <li class="chip">Custom Functionality</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group__title">Modern Web Stack</h3>
+          <ul class="chip-list">
+            <li class="chip">Next.js</li>
+            <li class="chip">TypeScript</li>
+            <li class="chip">JavaScript</li>
+            <li class="chip">Tailwind CSS</li>
+            <li class="chip">Prisma ORM</li>
+            <li class="chip">PostgreSQL</li>
+            <li class="chip">Neon</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group__title">Integrations &amp; Infra</h3>
+          <ul class="chip-list">
+            <li class="chip">Stripe Connect</li>
+            <li class="chip">Cloudflare R2</li>
+            <li class="chip">Vercel</li>
+            <li class="chip">Jotform</li>
+            <li class="chip">REST APIs</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group__title">Design &amp; Workflow</h3>
+          <ul class="chip-list">
+            <li class="chip chip--accent">AI-Assisted Dev</li>
+            <li class="chip">UI / UX Design</li>
+            <li class="chip">Responsive Design</li>
+            <li class="chip">SEO Optimization</li>
+            <li class="chip">Performance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== EXPERIENCE ============== -->
+    <section id="experience" class="section">
+      <div class="section__head">
+        <span class="section__num">03</span>
+        <h2 class="section__title">Experience</h2>
+        <span class="section__rule"></span>
+      </div>
+
+      <ol class="timeline">
+
+        <li class="t-item">
+          <div class="t-marker"></div>
+          <div class="t-content">
+            <div class="t-header">
+              <div>
+                <h3 class="t-role">Wix Website Designer &amp; Velo Developer</h3>
+                <div class="t-company">Simply Fast Websites</div>
+              </div>
+              <div class="t-dates">
+                <span>Apr 2023 – Nov 2023</span>
+                <span>May 2025 – Present</span>
+              </div>
+            </div>
+            <ul class="t-bullets">
+              <li>Designed and developed custom Wix websites using Wix Classic and Velo.</li>
+              <li>Built <strong>ilovefdl.com</strong> as an AI-assisted full-stack Next.js app using Claude Code, TypeScript, Tailwind, Prisma, Neon Postgres, Stripe Connect, Cloudflare R2, and Vercel.</li>
+              <li>Contributed to a multi-vendor marketplace, community newspaper, and business directory platform for Fond du Lac, Wisconsin.</li>
+              <li>Maintained and updated existing client websites for performance, responsiveness, and scalability.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="t-item">
+          <div class="t-marker"></div>
+          <div class="t-content">
+            <div class="t-header">
+              <div>
+                <h3 class="t-role">Wix Website Designer &amp; Wix Studio Developer</h3>
+                <div class="t-company">Attorney Sholdon Daniels, PLLC</div>
+              </div>
+              <div class="t-dates">
+                <span>Jan 2024 – Dec 2024</span>
+                <span>Jun 2025 – Present</span>
+              </div>
+            </div>
+            <ul class="t-bullets">
+              <li>Designed and developed custom Wix and Wix Studio sites for legal and political campaign projects.</li>
+              <li>Built and maintained <strong>DanielsForUS.com</strong> and <strong>sholdondaniels.com</strong> using Wix Studio with responsive layouts and modern UI/UX.</li>
+              <li>Implemented custom functionality and optimized performance for client engagement and accessibility.</li>
+              <li>Provided ongoing maintenance, updates, and technical support.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="t-item">
+          <div class="t-marker"></div>
+          <div class="t-content">
+            <div class="t-header">
+              <div>
+                <h3 class="t-role">Wix Website Designer</h3>
+                <div class="t-company">Achieve Greatness, LLC</div>
+              </div>
+              <div class="t-dates">
+                <span>Jul 2021 – Mar 2023</span>
+              </div>
+            </div>
+            <ul class="t-bullets">
+              <li>Designed and developed responsive business websites using Wix and Velo, including <strong>achievegreatness.co</strong>.</li>
+              <li>Created custom layouts, CMS-driven pages, and interactive features tailored to client requirements.</li>
+              <li>Maintained and optimized websites for performance, security, and UX.</li>
+              <li>Collaborated directly with clients to deliver scalable, visually engaging web solutions.</li>
+            </ul>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+
+    <!-- ============== PROJECTS ============== -->
+    <section id="projects" class="section">
+      <div class="section__head">
+        <span class="section__num">04</span>
+        <h2 class="section__title">Selected Work</h2>
+        <span class="section__rule"></span>
+      </div>
+
+      <div class="projects">
+
+        <article class="project">
+          <div class="project__media">
+            <div class="project__placeholder" aria-label="Project image placeholder">
+              <span class="placeholder-tag">project-01.jpg</span>
+              <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="6" y="6" width="48" height="48" rx="2"/>
+                <circle cx="22" cy="22" r="5"/>
+                <path d="M6 42l14-14 18 18M38 32l8-8 8 8"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span>Full-stack · AI-assisted</span>
+              <span class="project__year">2025</span>
+            </div>
+            <h3 class="project__title">I Love FDL</h3>
+            <p class="project__desc">A multi-vendor marketplace, community newspaper, and business directory platform for Fond du Lac, Wisconsin. Built as an AI-assisted Next.js application with Stripe Connect, Cloudflare R2, and Neon Postgres.</p>
+            <ul class="project__tags">
+              <li>Next.js</li><li>TypeScript</li><li>Prisma</li><li>Stripe Connect</li><li>Tailwind</li>
+            </ul>
+            <a href="https://ilovefdl.com" target="_blank" rel="noopener" class="project__link">
+              <span>Visit ilovefdl.com</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project project--reverse">
+          <div class="project__media">
+            <div class="project__placeholder">
+              <span class="placeholder-tag">project-02.jpg</span>
+              <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="6" y="6" width="48" height="48" rx="2"/>
+                <circle cx="22" cy="22" r="5"/>
+                <path d="M6 42l14-14 18 18M38 32l8-8 8 8"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span>Wix Studio · Political Campaign</span>
+              <span class="project__year">2024</span>
+            </div>
+            <h3 class="project__title">Daniels For US</h3>
+            <p class="project__desc">Political campaign website for Attorney Sholdon Daniels, built on Wix Studio with responsive layouts, modern UI/UX, and custom functionality for engagement and accessibility.</p>
+            <ul class="project__tags">
+              <li>Wix Studio</li><li>Velo</li><li>Responsive</li><li>UI/UX</li>
+            </ul>
+            <a href="https://danielsforus.com" target="_blank" rel="noopener" class="project__link">
+              <span>Visit danielsforus.com</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__media">
+            <div class="project__placeholder">
+              <span class="placeholder-tag">project-03.jpg</span>
+              <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="6" y="6" width="48" height="48" rx="2"/>
+                <circle cx="22" cy="22" r="5"/>
+                <path d="M6 42l14-14 18 18M38 32l8-8 8 8"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span>Wix Studio · Legal</span>
+              <span class="project__year">2024</span>
+            </div>
+            <h3 class="project__title">Sholdon Daniels, PLLC</h3>
+            <p class="project__desc">Professional legal practice website with modern UI/UX, responsive design, and clear client-facing communication structure. Built and maintained on Wix Studio.</p>
+            <ul class="project__tags">
+              <li>Wix Studio</li><li>Velo</li><li>SEO</li><li>UI/UX</li>
+            </ul>
+            <a href="https://sholdondaniels.com" target="_blank" rel="noopener" class="project__link">
+              <span>Visit sholdondaniels.com</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project project--reverse">
+          <div class="project__media">
+            <div class="project__placeholder">
+              <span class="placeholder-tag">project-04.jpg</span>
+              <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="6" y="6" width="48" height="48" rx="2"/>
+                <circle cx="22" cy="22" r="5"/>
+                <path d="M6 42l14-14 18 18M38 32l8-8 8 8"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span>Wix Studio · Business</span>
+              <span class="project__year">2024</span>
+            </div>
+            <h3 class="project__title">Ancilla Creative Solutions</h3>
+            <p class="project__desc">Responsive business website built on Wix Studio with modern layouts, responsive sections, and an SEO-focused structure.</p>
+            <ul class="project__tags">
+              <li>Wix Studio</li><li>Responsive</li><li>SEO</li>
+            </ul>
+            <a href="https://ancillaco.com" target="_blank" rel="noopener" class="project__link">
+              <span>Visit ancillaco.com</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__media">
+            <div class="project__placeholder">
+              <span class="placeholder-tag">project-05.jpg</span>
+              <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="6" y="6" width="48" height="48" rx="2"/>
+                <circle cx="22" cy="22" r="5"/>
+                <path d="M6 42l14-14 18 18M38 32l8-8 8 8"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span>Wix · Jotform Workflow</span>
+              <span class="project__year">2023</span>
+            </div>
+            <h3 class="project__title">Humanitas Holdings</h3>
+            <p class="project__desc">Replaced PDF-based application workflows with a custom Jotform solution integrated into a Wix website — streamlining the client application process and improving accessibility.</p>
+            <ul class="project__tags">
+              <li>Wix</li><li>Jotform</li><li>Automation</li>
+            </ul>
+            <a href="https://humanitasholdings.com" target="_blank" rel="noopener" class="project__link">
+              <span>Visit humanitasholdings.com</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="project project--reverse">
+          <div class="project__media">
+            <div class="project__placeholder">
+              <span class="placeholder-tag">project-06.jpg</span>
+              <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="6" y="6" width="48" height="48" rx="2"/>
+                <circle cx="22" cy="22" r="5"/>
+                <path d="M6 42l14-14 18 18M38 32l8-8 8 8"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__meta">
+              <span>Wix · Velo · Business</span>
+              <span class="project__year">2022</span>
+            </div>
+            <h3 class="project__title">Achieve Greatness</h3>
+            <p class="project__desc">Responsive business website built with Wix and Velo — custom layouts, CMS-driven pages, and interactive features tailored to client requirements.</p>
+            <ul class="project__tags">
+              <li>Wix</li><li>Velo</li><li>CMS</li>
+            </ul>
+            <a href="https://achievegreatness.co" target="_blank" rel="noopener" class="project__link">
+              <span>Visit achievegreatness.co</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============== CONTACT ============== -->
+    <section id="contact" class="section section--contact">
+      <div class="section__head">
+        <span class="section__num">05</span>
+        <h2 class="section__title">Contact</h2>
+        <span class="section__rule"></span>
+      </div>
+
+      <div class="contact">
+        <div class="contact__main">
+          <h3 class="contact__title">Have a project in mind?</h3>
+          <p class="contact__lede">
+            Whether you need a Wix site built from scratch, a Velo developer to add custom functionality, or a full-stack AI-assisted web app — I'd love to hear about it.
+          </p>
+
+          <a href="mailto:jaspermarc911@yahoo.com" class="contact__email">
+            <span>jaspermarc911@yahoo.com</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <ul class="contact__list">
+          <li>
+            <span class="contact__label">Email</span>
+            <a href="mailto:jaspermarc911@yahoo.com">jaspermarc911@yahoo.com</a>
+          </li>
+          <li>
+            <span class="contact__label">Phone</span>
+            <a href="tel:+639772187379">+63 977 218 7379</a>
+          </li>
+          <li>
+            <span class="contact__label">Location</span>
+            <span>Davao City, Philippines</span>
+          </li>
+          <li>
+            <span class="contact__label">Portfolio</span>
+            <a href="https://jaspermarc911.wixstudio.com/portfolio" target="_blank" rel="noopener">jaspermarc911.wixstudio.com</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">JC</span>
+        <span>Jasper Marc Chan</span>
+      </div>
+      <div class="footer__meta">
+        <span>© <span id="year">2026</span> · Designed &amp; built by Jasper Marc Chan</span>
+        <span class="footer__divider">·</span>
+        <span>Davao City, PH</span>
+      </div>
+      <a href="#top" class="footer__top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
