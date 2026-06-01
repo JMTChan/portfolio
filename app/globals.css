@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Dual-theme tokens. Values are space-separated RGB channels so Tailwind's
+  `rgb(var(--x) / <alpha-value>)` can apply opacity. The active palette is
+  chosen by `data-theme` on <html>.
+
+  - business : warm editorial "paper" identity (ink-blue accent)
+  - dev      : a refined dark editor palette (soft azure accent)
+*/
+
+:root,
+[data-theme='business'] {
+  --color-bg: 244 241 234;
+  --color-surface: 239 234 224;
+  --color-surface-2: 233 227 214;
+  --color-fg: 26 23 20;
+  --color-fg-muted: 74 69 64;
+  --color-fg-subtle: 115 108 99;
+  --color-border: 216 208 194;
+  --color-border-strong: 196 187 171;
+  --color-accent: 29 78 216;
+  --color-accent-strong: 15 58 168;
+  --color-on-accent: 255 255 255;
+}
+
+[data-theme='dev'] {
+  --color-bg: 26 23 20;          /* #1a1714  (paper theme's ink) */
+  --color-surface: 38 34 29;     /* #26221d */
+  --color-surface-2: 48 43 37;   /* #302b25 */
+  --color-fg: 244 241 234;       /* #f4f1ea  (paper theme's paper) */
+  --color-fg-muted: 196 187 171; /* #c4bbab  warm muted */
+  --color-fg-subtle: 138 129 112;/* #8a8170  warm meta */
+  --color-border: 51 46 40;      /* #332e28 */
+  --color-border-strong: 74 67 59;/* #4a433b */
+  --color-accent: 79 124 245;    /* #4f7cf5  lifted ink-blue (sibling of business #1d4ed8) */
+  --color-accent-strong: 111 148 250;/* #6f94fa */
+  --color-on-accent: 26 23 20;   /* #1a1714 */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    line-height: 1.55;
+    overflow-x: hidden;
+    transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+      color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  ::selection {
+    @apply bg-accent text-on-accent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
