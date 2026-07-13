@@ -28,17 +28,21 @@ export default function Nav() {
     setHidden(y > prev && y > 200);
   });
 
-  // 1. Add this programmatic scroll handler
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault(); // Stop the default browser jump
-    setOpen(false);     // Close the mobile menu if it's open
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    e.preventDefault();
+    setOpen(false);
 
-    const targetElement = document.querySelector(href);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-      // Optional: Update the URL hash cleanly without causing a jump
-      window.history.pushState(null, '', href); 
-    }
+    const el = document.querySelector(href);
+    if (!el) return;
+
+    // let the close begin, then scroll on the next frame
+    requestAnimationFrame(() => {
+      el.scrollIntoView({ behavior: 'smooth' });
+      history.replaceState(null, '', href); // keeps the URL hash in sync
+    });
   };
 
   return (
@@ -59,10 +63,10 @@ export default function Nav() {
 
         <div className="hidden items-center gap-7 md:flex">
           {LINKS.map(([label, href]) => (
-            <a
+            
               key={href}
               href={href}
-              onClick={(e) => handleScroll(e, href)} // 2. Apply handler to desktop
+              onClick={(e) => handleNavClick(e, href)}
               className="group relative text-sm text-muted transition-colors hover:text-foreground"
             >
               {label}
@@ -96,10 +100,10 @@ export default function Nav() {
           >
             <div className="mx-auto flex max-w-wrap flex-col gap-1 px-6 py-3">
               {LINKS.map(([label, href]) => (
-                <a
+                
                   key={href}
                   href={href}
-                  onClick={(e) => handleScroll(e, href)} // 3. Apply handler to mobile
+                  onClick={(e) => handleNavClick(e, href)}
                   className="py-2 text-sm text-muted transition-colors hover:text-foreground"
                 >
                   {label}
