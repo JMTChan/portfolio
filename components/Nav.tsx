@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, type MouseEvent } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { useTheme } from '@/context/ThemeProvider';
@@ -28,10 +28,7 @@ export default function Nav() {
     setHidden(y > prev && y > 200);
   });
 
-  const handleNavClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href: string,
-  ) => {
+  const handleNavClick = (e: MouseEvent, href: string) => {
     e.preventDefault();
     setOpen(false);
 
