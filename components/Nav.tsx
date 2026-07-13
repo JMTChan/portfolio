@@ -28,6 +28,19 @@ export default function Nav() {
     setHidden(y > prev && y > 200);
   });
 
+  // 1. Add this programmatic scroll handler
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault(); // Stop the default browser jump
+    setOpen(false);     // Close the mobile menu if it's open
+
+    const targetElement = document.querySelector(href);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+      // Optional: Update the URL hash cleanly without causing a jump
+      window.history.pushState(null, '', href); 
+    }
+  };
+
   return (
     <motion.nav
       animate={{ y: hidden ? '-110%' : '0%' }}
@@ -49,6 +62,7 @@ export default function Nav() {
             <a
               key={href}
               href={href}
+              onClick={(e) => handleScroll(e, href)} // 2. Apply handler to desktop
               className="group relative text-sm text-muted transition-colors hover:text-foreground"
             >
               {label}
@@ -85,7 +99,7 @@ export default function Nav() {
                 <a
                   key={href}
                   href={href}
-                  onClick={() => setOpen(false)}
+                  onClick={(e) => handleScroll(e, href)} // 3. Apply handler to mobile
                   className="py-2 text-sm text-muted transition-colors hover:text-foreground"
                 >
                   {label}
