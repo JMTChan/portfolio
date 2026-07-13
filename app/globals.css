@@ -64,7 +64,3 @@
     scroll-behavior: auto;
   }
 }
-
-section[id] {
-  scroll-margin-top: 5rem; /* roughly your nav height */
-}
