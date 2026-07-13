@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, type MouseEvent } from 'react';
+import { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { useTheme } from '@/context/ThemeProvider';
@@ -28,20 +28,6 @@ export default function Nav() {
     setHidden(y > prev && y > 200);
   });
 
-  const handleNavClick = (e: MouseEvent, href: string) => {
-    e.preventDefault();
-    setOpen(false);
-
-    const el = document.querySelector(href);
-    if (!el) return;
-
-    // let the close begin, then scroll on the next frame
-    requestAnimationFrame(() => {
-      el.scrollIntoView({ behavior: 'smooth' });
-      history.replaceState(null, '', href); // keeps the URL hash in sync
-    });
-  };
-
   return (
     <motion.nav
       animate={{ y: hidden ? '-110%' : '0%' }}
@@ -63,7 +49,6 @@ export default function Nav() {
             <a
               key={href}
               href={href}
-              onClick={(e) => handleNavClick(e, href)}
               className="group relative text-sm text-muted transition-colors hover:text-foreground"
             >
               {label}
@@ -100,7 +85,7 @@ export default function Nav() {
                 <a
                   key={href}
                   href={href}
-                  onClick={(e) => handleNavClick(e, href)}
+                  onClick={() => setOpen(false)}
                   className="py-2 text-sm text-muted transition-colors hover:text-foreground"
                 >
                   {label}
