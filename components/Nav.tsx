@@ -60,7 +60,7 @@ export default function Nav() {
 
         <div className="hidden items-center gap-7 md:flex">
           {LINKS.map(([label, href]) => (
-            
+            <a
               key={href}
               href={href}
               onClick={(e) => handleNavClick(e, href)}
@@ -97,7 +97,7 @@ export default function Nav() {
           >
             <div className="mx-auto flex max-w-wrap flex-col gap-1 px-6 py-3">
               {LINKS.map(([label, href]) => (
-                
+                <a
                   key={href}
                   href={href}
                   onClick={(e) => handleNavClick(e, href)}
